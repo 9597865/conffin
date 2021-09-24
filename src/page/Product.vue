@@ -1,31 +1,17 @@
 <template>
-  <div>
-    <TopMenu/>
-    <Banner :bannerPic="bannerImg"/>
-    <!-- <MainList :datalist="pddListData" /> -->
-    <AlertDiv/>
-    <router-view class="view"></router-view>
-    <Copyright/>
+  <div class="main-box">
+    <img :src="imgIcon">
+   <MainList :datalist="pddListData" />
   </div>
 </template>
 
 <script>
-import TopMenu from './components/TopMenu.vue'
-import MainList from './components/MainList.vue'
-import AlertDiv from './components/alert/AlertDiv.vue'
-import Banner from './components/Banner.vue'
-import Copyright from './components/Copyright.vue'
+import MainList from '../components/MainList.vue'
 export default {
-  name: 'App',
+  name: 'product',
   data(){
     return {
-      bannerImg:require("./assets/images/banner.png"),
-      topImgList:[
-        'https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/b8014a90f603738d8387f7fabd1bb051f919ec1d.jpg',
-        'https://t16img.yangkeduo.com/pdd_oms/2020-12-31/8c4982a42171002be033beaf5ad3817d.jpg',
-        'https://www.qiter.com/static/pic/banner01.jpeg',
-        'https://www.qiter.com/static/pic/banner02.png'
-      ],
+      imgIcon:require('../assets/images/icon_chanpinjianjie.png'),
       pddListData:[
         {
           title:'【包邮】【北极绒】秋冬男女德绒保暖内衣套装无痕加绒加厚加大码秋衣秋裤',
@@ -33,7 +19,7 @@ export default {
           priceBottom:'19.8',
           toRut:'/',
           date:20210922,
-          thumb:require("./assets/images/product/01.png"),
+          thumb:require("../assets/images/product/01.png"),
           gotourl:'https://p.pinduoduo.com/y5la1qAu'
         },
         {
@@ -42,7 +28,7 @@ export default {
           priceBottom:'17.9',
           toRut:'/product',
           date:20210922,
-          thumb:require("./assets/images/product/02.png"),
+          thumb:require("../assets/images/product/02.png"),
           gotourl:'https://p.pinduoduo.com/V3saFOSD'
         },
         {
@@ -51,7 +37,7 @@ export default {
           priceBottom:'16.9',
           toRut:'/resume',
           date:20210922,
-          thumb:require("./assets/images/product/03.png"),
+          thumb:require("../assets/images/product/03.png"),
           gotourl:'https://p.pinduoduo.com/4dearFP1'
         },
         {
@@ -60,7 +46,7 @@ export default {
           priceBottom:'14.9',
           toRut:'/about',
           date:20210921,
-          thumb:require("./assets/images/product/04.png"),
+          thumb:require("../assets/images/product/04.png"),
           gotourl:'https://p.pinduoduo.com/nAqa4r6W'
         },
         
@@ -69,13 +55,8 @@ export default {
     }
   },
   components: {
-    AlertDiv,
-    Banner,
-    TopMenu,
-    Copyright
-  },
-  
-
+    MainList
+  }
 }
 </script>
 
@@ -85,14 +66,8 @@ body{
   padding: 0;
   background-color: #000;
 }
-#app {
-  margin: 0;
-  padding: 0;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.main-box{
+  background-color: #e8e4d9;
 }
 
 </style>

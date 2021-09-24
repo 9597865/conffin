@@ -6,10 +6,11 @@
      <div class="menu-list  menu-fade" v-if="isShowMenu" @click.stop="clickCloseMenu" >
         <div :style="{ 'width':'100%', 'background-color': '#000', 'background-image': 'url(' + menuBgImgUrl + ')', 'background-repeat': 'no-repeat', 'background-size': '120px 220px', 'background-position': 'top left' }">
 
-          <div class="menu-item" @click.stop="clickMenu">木厂简介</div>
-          <div class="menu-item" @click.stop="clickMenu">产品介绍</div>
-          <div class="menu-item" @click.stop="clickMenu">商务合作</div>
-          <div class="menu-item" @click.stop="clickMenu">联系方式</div>
+          <div class="menu-item" @click.stop="clickMenu('/')">首页</div>
+          <div class="menu-item" @click.stop="clickMenu('/resume')">木厂简介</div>
+          <div class="menu-item" @click.stop="clickMenu('/product')">产品介绍</div>
+          <div class="menu-item" @click.stop="clickMenu('/cooperate')">商务合作</div>
+          <div class="menu-item" @click.stop="clickMenu('/contact')">联系方式</div>
         </div>
      </div>
  </div> 
@@ -31,11 +32,16 @@
         console.log(this.$attrs)
     },
     methods: {
-        clickFun(e) {
+        showMenu(){
             this.isShowMenu = !this.isShowMenu 
+        },
+        clickFun(e) {
+            this.showMenu()
             this.$emit('click-event', e)
         },
         clickMenu(e){
+            this.showMenu()
+            this.$router.push({ path: e })
         },
         clickCloseMenu(){
             this.isShowMenu = false 

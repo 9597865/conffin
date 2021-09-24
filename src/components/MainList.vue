@@ -4,13 +4,11 @@
     <ul
       class="list"
     >
-      <div v-for="item in datalist" :key="item" class="list-item" :style="{'width':(webWidth-spaceMargin)+'px'}">
-        <img :src="item.thumb">
-        <!-- <a class="list-box" :href="item.gotourl">
-        <div class="img-thumb" :style="{ 'width':(webWidth-spaceMargin)+'px', 'height':(webWidth-spaceMargin)+'px','background-image': 'url(' + item.thumb + ')', 'background-repeat': 'no-repeat', 'background-size': 'contain', 'background-position': 'top center' }">
-        </div></a> -->
+      <div v-for="(item, index) in datalist" :key="item" class="list-item" :style="{'width':(webWidth-spaceMargin)+'px'}">
+          <img :src="item.thumb" @click="clickItem(item,index)">
       </div>
     </ul>
+      
   </div>
 </template>
 <script>
@@ -46,6 +44,10 @@
       },
       setWebTitle(){
         document.title = '多多捡漏多多进宝'
+      },
+      clickItem(item, index){
+        console.log(item.toRut)
+        this.$router.push({ path: item.toRut })
       }
     },
   }
