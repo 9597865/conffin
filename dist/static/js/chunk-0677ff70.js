@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-0677ff70"],{"4f1f":function(n,e,t){"use strict";t("eae1")},"9d2a":function(n,e,t){"use strict";t.r(e);var c=t("7a23"),a={class:"main-box"};function o(n,e,t,o,f,r){return Object(c["openBlock"])(),Object(c["createElementBlock"])("div",a," 联系方式 ")}var f={name:"contact",data:function(){return{}},components:{}};t("4f1f");f.render=o;e["default"]=f},eae1:function(n,e,t){}}]);
+//# sourceMappingURL=chunk-0677ff70.js.map
