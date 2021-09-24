@@ -1,7 +1,16 @@
 <template>
  <div class="bg">
      <div class="menu-box" @click="clickFun">
-         <div class="menu-line"></div>
+        <div class="menu-line"></div>
+     </div>
+     <div class="menu-list  menu-fade" v-if="isShowMenu" @click.stop="clickCloseMenu" >
+        <div :style="{ 'width':'100%', 'background-color': '#000', 'background-image': 'url(' + menuBgImgUrl + ')', 'background-repeat': 'no-repeat', 'background-size': '120px 220px', 'background-position': 'top left' }">
+
+          <div class="menu-item" @click.stop="clickMenu">木厂简介</div>
+          <div class="menu-item" @click.stop="clickMenu">产品介绍</div>
+          <div class="menu-item" @click.stop="clickMenu">商务合作</div>
+          <div class="menu-item" @click.stop="clickMenu">联系方式</div>
+        </div>
      </div>
  </div> 
 </template>
@@ -10,15 +19,26 @@
   export default {
     name: "TestCom",
     props: {
-          title: {type: String,default: "",},
+        title: {type: String,default: "",},
+    },
+    data(){
+        return {
+            isShowMenu:false,
+            menuBgImgUrl:require("../assets/images/icon_chuancheng.png")
+        }
     },
     created() {
         console.log(this.$attrs)
     },
     methods: {
         clickFun(e) {
-            alert('qiter')
+            this.isShowMenu = !this.isShowMenu 
             this.$emit('click-event', e)
+        },
+        clickMenu(e){
+        },
+        clickCloseMenu(){
+            this.isShowMenu = false 
         }
     }
   }
@@ -27,9 +47,14 @@
 <style lang="scss" scoped>
 $lineColor:#ccc;
 .bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width:100%;
+    height:100%;
     display: flex;
     align-content: center;
-    justify-content: right;
     align-items: center;
     width:100%;
     height: 60px;
@@ -41,15 +66,60 @@ $lineColor:#ccc;
         /* background-color: #666; */
         .menu-line{
             width: 30px;
-            height: 5px;
-            border-top: 5px solid $lineColor;
-            border-bottom:5px solid $lineColor;
+            height: 3px;
+            border-top: 3px solid $lineColor;
+            border-bottom:3px solid $lineColor;
             background-color: $lineColor;
-            padding: 5px 0;
+            padding: 7px 0;
             margin:10px 10px;
             background-clip:content-box;
         }
-
+    }
+    .menu-list{
+        position: fixed;
+        top: 59px;
+        left: 0;
+        z-index: 1;
+        width:100%;
+        height:100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        .menu-item{
+            color:#ccc;
+            font-size: 20px;
+            /* margin-top:10px; */
+            padding:15px 10px;
+            /* border:1px solid #f63; */
+            border-top: 1px solid rgb(20, 20, 20);
+            /* background-color: #000; */
+            &:hover{
+                color:#fff;
+                background-color: #222;
+            }
+            &:active{
+                color:#fff;
+                background-color: #222;
+            }
+        }
+    }
+    .menu-fade
+    {
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 1s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+    }
+    @-webkit-keyframes fadeIn {
+        0% {
+        opacity: 0; /*初始状态 透明度为0*/
+        }
+        50% {
+        opacity: 1; /*中间状态 透明度为0*/
+        }
+        100% {
+        opacity: 1; /*结尾状态 透明度为1*/
+        }
     }
 }
 </style>

@@ -9,8 +9,6 @@
         <!-- <a class="list-box" :href="item.gotourl">
         <div class="img-thumb" :style="{ 'width':(webWidth-spaceMargin)+'px', 'height':(webWidth-spaceMargin)+'px','background-image': 'url(' + item.thumb + ')', 'background-repeat': 'no-repeat', 'background-size': 'contain', 'background-position': 'top center' }">
         </div></a> -->
-        
-        
       </div>
     </ul>
   </div>
@@ -98,7 +96,10 @@ $body-size:1.4rem;
     overflow: hidden;
     margin-left: 0;
     margin-right: 0;
-    
+    img{
+      max-width: 100%;
+      height:auto;
+    }
   }
   
   

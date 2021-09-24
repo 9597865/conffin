@@ -1,5 +1,5 @@
 <template>
- <div>
+ <div class="top60">
    <div class="banner" :style="{ 'background-image': 'url(' + bannerPic + ')', 'background-repeat': 'no-repeat', 'background-size': 'cover', 'background-position': 'center' }">
     </div>  
  </div> 
@@ -12,6 +12,9 @@
 </script>
 
 <style>
+.top60{
+    margin-top: 60px;
+}
 .banner{
     height: 230px;
 }
