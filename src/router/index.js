@@ -1,6 +1,7 @@
 
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
 const routerHistory = createWebHistory()
+const routerHashHistory = createWebHashHistory()
 const HomePage = () => import("../page/Home.vue");
 const ProductPage = () => import("../page/Product.vue");
 const ResumePage= () => import("../page/Resume.vue");
@@ -8,7 +9,7 @@ const ContactPage = () => import("../page/Contact.vue");
 const Cooperate = () => import("../page/Cooperate.vue");
 
 const router = createRouter({
-    history: routerHistory,
+    history: routerHashHistory,
     routes: [
       {
         path: '/',
