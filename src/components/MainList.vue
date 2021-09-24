@@ -5,11 +5,12 @@
       class="list"
     >
       <div v-for="item in datalist" :key="item" class="list-item" :style="{'width':(webWidth-spaceMargin)+'px'}">
-        <a class="list-box" :href="item.gotourl">
-        <div class="img-thumb" :style="{ 'width':(webWidth-spaceMargin)+'px', 'height':(webWidth-spaceMargin)+'px','background-image': 'url(' + item.thumb + ')', 'background-repeat': 'no-repeat', 'background-size': 'cover', 'background-position': 'top center' }">
-        </div>
+        <img :src="item.thumb">
+        <!-- <a class="list-box" :href="item.gotourl">
+        <div class="img-thumb" :style="{ 'width':(webWidth-spaceMargin)+'px', 'height':(webWidth-spaceMargin)+'px','background-image': 'url(' + item.thumb + ')', 'background-repeat': 'no-repeat', 'background-size': 'contain', 'background-position': 'top center' }">
+        </div></a> -->
         
-        </a>
+        
       </div>
     </ul>
   </div>
@@ -77,7 +78,7 @@ $body-size:1.4rem;
   flex-wrap: wrap;
   padding: 0;
   margin:0;
-  background: #000;
+  background: #e8e4d9;
   .list-item {
     /* border: 1px solid #f63; */
     /* height: 260px; */
