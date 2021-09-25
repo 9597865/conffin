@@ -43,7 +43,7 @@
         }, 2000)
       },
       setWebTitle(){
-        document.title = '多多捡漏多多进宝'
+        // document.title = '多多捡漏多多进宝'
       },
       clickItem(item, index){
         console.log(item.toRut)

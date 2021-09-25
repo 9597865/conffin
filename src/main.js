@@ -5,7 +5,7 @@ import 'element-plus/dist/index.css'
 import App from './App.vue'
 import router from './router/index.js'
 
-document.title = ''
+document.title = '郑氏木器工艺'
 
 const app = createApp(App)
 app.use(router)
