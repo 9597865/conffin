@@ -1,6 +1,13 @@
 <template>
   <div class="main-box">
-     联系方式 
+    <div class="topleft-bgimg"></div>
+    <div class="txt-box">
+      <p>河北省河间市郑氏寿材木器厂</p>
+      <p>总经理:郑继光</p>
+      <p>手机:13780574961</p>
+      <p>地址:河北省河间市故仙镇郑孔务村</p>
+      <iframe width="300" height="250" frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src="https://surl.amap.com/2OTnPXr1b6X2"></iframe>
+    </div>
   </div>
 </template>
 
@@ -18,7 +25,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
 body{
   margin: 0;
   padding: 0;
@@ -28,5 +36,22 @@ body{
   min-height: 800px;
 
   background-color: #e8e4d9;
+  .topleft-bgimg{
+    width:180px;
+    height: 160px;
+    background-size: 180px 160px;
+    background-repeat: no-repeat;
+    background-image: url("../assets/images/product_topleft_bg.png");
+  }
+  .txt-box{
+    margin: 0 auto;
+    margin-left: 60px;
+    width: 80%;
+    text-align: left;
+    font-size: 1.2rem;
+    p{
+     line-height: 15px; 
+    }
+  }
 }
 </style>

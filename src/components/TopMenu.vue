@@ -3,6 +3,11 @@
      <div class="menu-box" @click="clickFun">
         <div class="menu-line"></div>
      </div>
+     <div class="menu-txt-list-box" >
+        <div class="menu-txt-item" @click.stop="clickTxtMenu('/')">木厂简介</div>
+        <div class="menu-txt-item" @click.stop="clickTxtMenu('/product')">产品介绍</div>
+        <div class="menu-txt-item" @click.stop="clickTxtMenu('/contact')">联系方式</div>
+     </div>
      <div class="menu-list  menu-fade" v-if="isShowMenu" @click.stop="clickCloseMenu" >
         <div :style="{ 'width':'100%', 'background-color': '#000', 'background-image': 'url(' + menuBgImgUrl + ')', 'background-repeat': 'no-repeat', 'background-size': '120px 220px', 'background-position': 'top left' }">
 
@@ -43,6 +48,9 @@
             this.showMenu()
             this.$router.push({ path: e })
         },
+        clickTxtMenu(e){
+            this.$router.push({ path: e })
+        },
         clickCloseMenu(){
             this.isShowMenu = false 
         }
@@ -79,6 +87,25 @@ $lineColor:#ccc;
             padding: 7px 0;
             margin:10px 10px;
             background-clip:content-box;
+        }
+    }
+    .menu-txt-list-box{
+        position: fixed;
+        left:0;
+        margin-top: 120px;
+        width:100%;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #333;
+        .menu-txt-item{
+            padding: 0 20px ;
+            color:#fff;
+            &:active{
+                color: #f00;
+            }
         }
     }
     .menu-list{

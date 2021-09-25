@@ -53,7 +53,7 @@ body{
     height: 160px;
     background-size: 180px 160px;
     background-repeat: no-repeat;
-    background-image: url("../assets/images/product_topleft_bg.png");
+    background-image: url("../assets/images/product_topleft_bg_02.png");
   }
   .txt-box{
     padding:0 10% 10%;
