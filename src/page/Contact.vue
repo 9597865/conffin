@@ -6,6 +6,16 @@
       <p>总经理:郑继光</p>
       <p>手机:13780574961</p>
       <p>地址:河北省河间市故仙镇郑孔务村</p>
+      <div class="qr">
+        <div class="qrbox">
+          <img :src="wxqr">
+          微信客服1
+        </div>
+        <div class="qrbox">
+          <img :src="zjgwxqr">
+          微信客服2
+        </div>
+      </div>
       <iframe width="300" height="250" frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src="https://surl.amap.com/2OTnPXr1b6X2"></iframe>
     </div>
   </div>
@@ -17,7 +27,8 @@ export default {
   name: 'contact',
   data(){
     return {
-      
+      wxqr:require('../assets/xiaoguanren_qr_wx.jpeg'),
+      zjgwxqr:require('../assets/zjg_qr_wx.png')
     }
   },
   components: {
@@ -34,8 +45,19 @@ body{
 }
 .main-box{
   min-height: 800px;
-
   background-color: #e8e4d9;
+  .qr{
+    display: flex;
+    flex-direction: row;
+    .qrbox{
+      width:180px;
+      margin:10px;
+      text-align: center;
+    }
+    img{
+      max-width: 100%;
+    }
+  }
   .topleft-bgimg{
     width:180px;
     height: 160px;

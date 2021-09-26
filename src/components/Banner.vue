@@ -13,7 +13,7 @@
 
 <style>
 .top60{
-    margin-top: 120px;
+    margin-top: 60px;
 }
 .banner{
     height: 230px;

@@ -4,6 +4,7 @@ const routerHistory = createWebHistory()
 const routerHashHistory = createWebHashHistory()
 const HomePage = () => import("../page/Home.vue");
 const ProductPage = () => import("../page/Product.vue");
+const ProductDetailsPage = () => import("../page/product/details.vue");
 const ResumePage= () => import("../page/Resume.vue");
 const ContactPage = () => import("../page/Contact.vue");
 const Cooperate = () => import("../page/Cooperate.vue");
@@ -21,7 +22,11 @@ const router = createRouter({
       },
       {
         path: '/product',
-        component: ProductPage
+        component: ProductPage,
+      },
+      {
+        path: '/product/details/0',
+        component: ProductDetailsPage,
       },
       {
         path: '/resume',

@@ -3,7 +3,7 @@
      <div class="menu-box" @click="clickFun">
         <div class="menu-line"></div>
      </div>
-     <div class="menu-txt-list-box" >
+     <div class="menu-txt-list-box" v-if="!isShowMenu">
         <div class="menu-txt-item" @click.stop="clickTxtMenu('/')">木厂简介</div>
         <div class="menu-txt-item" @click.stop="clickTxtMenu('/product')">产品介绍</div>
         <div class="menu-txt-item" @click.stop="clickTxtMenu('/contact')">联系方式</div>
@@ -90,9 +90,6 @@ $lineColor:#ccc;
         }
     }
     .menu-txt-list-box{
-        position: fixed;
-        left:0;
-        margin-top: 120px;
         width:100%;
         height: 60px;
         display: flex;

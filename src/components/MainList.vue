@@ -8,7 +8,6 @@
           <img :src="item.thumb" @click="clickItem(item,index)">
       </div>
     </ul>
-      
   </div>
 </template>
 <script>

@@ -4,7 +4,6 @@
    <MainList :datalist="pddListData" />
   </div>
 </template>
-
 <script>
 import MainList from '../components/MainList.vue'
 export default {
@@ -17,7 +16,7 @@ export default {
           title:'【包邮】【北极绒】秋冬男女德绒保暖内衣套装无痕加绒加厚加大码秋衣秋裤',
           priceTop:'67.8',
           priceBottom:'19.8',
-          toRut:'/',
+          toRut:'/product/details/0',
           date:20210922,
           thumb:require("../assets/images/product/01.png"),
           gotourl:'https://p.pinduoduo.com/y5la1qAu'
