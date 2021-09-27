@@ -32,6 +32,7 @@
     },
     mounted () {
       this.setWebTitle() // 1
+      console.log(this.datalist)
     },
     methods: {
       load() {
@@ -97,6 +98,9 @@ $body-size:1.4rem;
     overflow: hidden;
     margin-left: 0;
     margin-right: 0;
+    &:active{
+      opacity: 0.5;
+    }
     img{
       max-width: 100%;
       height:auto;

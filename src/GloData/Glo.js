@@ -1,0 +1,29 @@
+module.exports = {
+    productSlidrList:[
+        {
+          title:'吉祥棺',
+          pic:require("../assets/images/slider/01.png"),
+          toRouter:'/product/details/0'
+        },
+        {
+          title:'洪福棺',
+          pic:require("../assets/images/slider/02.png"),
+          toRouter:'/product/details/1'
+        },
+        {
+          title:'祥福棺',
+          pic:require("../assets/images/slider/03.png"),
+          toRouter:'/product/details/2'
+        },
+        {
+          title:'瑞祥棺',
+          pic:require("../assets/images/slider/04.png"),
+          toRouter:'/product/details/3'
+        },
+        {
+          title:'永福棺',
+          pic:require("../assets/images/slider/05.png"),
+          toRouter:'/product/details/4'
+        },
+    ]
+}

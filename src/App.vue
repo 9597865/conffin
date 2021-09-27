@@ -2,7 +2,6 @@
   <div>
     <TopMenu/>
     <Banner :bannerPic="bannerImg"/>
-    <!-- <MainList :datalist="pddListData" /> -->
     <AlertDiv/>
     <router-view class="view"></router-view>
     <Copyright/>
@@ -11,7 +10,6 @@
 
 <script>
 import TopMenu from './components/TopMenu.vue'
-import MainList from './components/MainList.vue'
 import AlertDiv from './components/alert/AlertDiv.vue'
 import Banner from './components/Banner.vue'
 import Copyright from './components/Copyright.vue'
@@ -26,46 +24,7 @@ export default {
         'https://www.qiter.com/static/pic/banner01.jpeg',
         'https://www.qiter.com/static/pic/banner02.png'
       ],
-      pddListData:[
-        {
-          title:'【包邮】【北极绒】秋冬男女德绒保暖内衣套装无痕加绒加厚加大码秋衣秋裤',
-          priceTop:'67.8',
-          priceBottom:'19.8',
-          toRut:'/',
-          date:20210922,
-          thumb:require("./assets/images/product/01.png"),
-          gotourl:'https://p.pinduoduo.com/y5la1qAu'
-        },
-        {
-          title:'【包邮】秋冬新款ins韩版加绒加厚连帽卫衣女潮大码女装外套上衣时尚宽松',
-          priceTop:'69.9',
-          priceBottom:'17.9',
-          toRut:'/product',
-          date:20210922,
-          thumb:require("./assets/images/product/02.png"),
-          gotourl:'https://p.pinduoduo.com/V3saFOSD'
-        },
-        {
-          title:'【包邮】南极人印花圆领卫衣男秋季新款街头ins潮流嘻哈上衣宽松休闲外套',
-          priceTop:'49.9',
-          priceBottom:'16.9',
-          toRut:'/resume',
-          date:20210922,
-          thumb:require("./assets/images/product/03.png"),
-          gotourl:'https://p.pinduoduo.com/4dearFP1'
-        },
-        {
-          title:'【包邮】南极人印花圆领卫衣男秋季新款街头ins潮流嘻哈上衣宽松休闲外套',
-          priceTop:'39.9',
-          priceBottom:'14.9',
-          toRut:'/about',
-          date:20210921,
-          thumb:require("./assets/images/product/04.png"),
-          gotourl:'https://p.pinduoduo.com/nAqa4r6W'
-        },
-        
-
-      ]
+      
     }
   },
   components: {
