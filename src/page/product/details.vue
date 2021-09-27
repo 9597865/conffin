@@ -21,18 +21,21 @@ export default {
       sliderList:[],
       detailListData:[
           [
-            require('../../assets/images/product/details/0/img_01.png'),
-            require('../../assets/images/product/details/0/img_02.png'),
-            require('../../assets/images/product/details/0/img_03.png'),
-            require('../../assets/images/product/details/0/img_04.png'),
-            require('../../assets/images/product/details/0/img_05.png'),
+            require('../../assets/images/product/details/0/img_0_01.png'),
+            require('../../assets/images/product/details/0/img_0_02.png'),
+            require('../../assets/images/product/details/0/img_0_03.png'),
+            require('../../assets/images/product/details/0/img_0_04.png'),
+            require('../../assets/images/product/details/0/img_0_05.png'),
           ],
           [
-            require('../../assets/images/product/details/0/img_05.png'),
-            require('../../assets/images/product/details/0/img_04.png'),
-            require('../../assets/images/product/details/0/img_03.png'),
-            require('../../assets/images/product/details/0/img_02.png'),
-            require('../../assets/images/product/details/0/img_01.png'),
+            require('../../assets/images/product/details/1/img_1_01.png'),
+            require('../../assets/images/product/details/1/img_1_02.png'),
+            require('../../assets/images/product/details/1/img_1_03.png'),
+            require('../../assets/images/product/details/1/img_1_04.png'),
+            require('../../assets/images/product/details/1/img_1_05.png'),
+            require('../../assets/images/product/details/1/img_1_06.png'),
+            require('../../assets/images/product/details/1/img_1_07.png'),
+            require('../../assets/images/product/details/1/img_1_08.png'),
           ]
       ]
     }
@@ -44,15 +47,21 @@ export default {
     '$route': 'fetchData'
   },
   created:function(){
-       this.fetchData()
-       this.picList = this.detailListData[0]
-       this.sliderList = Glo.productSlidrList
+      const id = this.getUrlDetailsId()
+      this.fetchData()
+      this.picList = this.detailListData[id]
+      this.sliderList = Glo.productSlidrList
   },
   methods: {
+    getUrlDetailsId(){
+      const pathObj = pathParse(this.$route.fullPath)
+      const id = pathObj.name || 0
+      return id
+    },
     fetchData () {
       // replace getPost with your data fetching util / API wrapper
-      console.log('details qiter')
-      console.log(this.$route)
+      // console.log('details qiter')
+      // console.log(this.$route)
       /**
        * base: "0"
         dir: "/product/details"
@@ -60,18 +69,8 @@ export default {
         name: "0"
         root: "/"
        */
-      const pathObj = pathParse(this.$route.fullPath)
-      console.log(pathObj.name)
-      const id = pathObj.name || 0
+      const id = this.getUrlDetailsId() 
       this.picList = this.detailListData[id]
-      //   getPost(this.$route.params.id, (err, post) => {
-      //     this.loading = false
-      //     if (err) {
-      //       this.error = err.toString()
-      //     } else {
-      //       this.post = post
-      //     }
-      //   })
       }
    }
 

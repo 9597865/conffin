@@ -32,7 +32,6 @@
     },
     mounted () {
       this.setWebTitle() // 1
-      console.log(this.datalist)
     },
     methods: {
       load() {
@@ -46,7 +45,6 @@
         // document.title = '多多捡漏多多进宝'
       },
       clickItem(item, index){
-        console.log(item.toRut)
         this.$router.push({ path: item.toRut })
       }
     },
