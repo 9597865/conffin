@@ -15,7 +15,7 @@
     created() {
         let leftPox = 0
         let sign = 1
-        if(this.$refs['image-box']!=undefined){
+        this.$nextTick(()=>{
             setTimeout(()=>{
                 const intervalId = setInterval(()=>{
                     leftPox += 2*sign
@@ -24,12 +24,11 @@
                         sign = -1
                     }
                     if(this.$refs['image-box']==null || leftPox<=0){
-                        console.log('清除----')
                         clearInterval(intervalId)
                     }
                 },10)
             },2000)
-        }
+        })
     },
     methods: {
         itemClick(e){
