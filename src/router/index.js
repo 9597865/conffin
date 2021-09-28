@@ -44,12 +44,9 @@ const router = createRouter({
     ]
   })
   router.beforeEach((to, from, next) => {
-    // ...
     const pathObj = pathParse(to.fullPath)
     const id = pathObj.name || 0
-    console.log(id)
     let defaultTitle = '郑氏工艺'
-    
     if(to.fullPath.indexOf('/product/details/')!=-1){
       let title = defaultTitle+'-'+Glo.productSlidrList[id].title
       defaultTitle = title

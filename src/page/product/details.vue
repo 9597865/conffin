@@ -49,6 +49,12 @@ export default {
             require('../../assets/images/product/details/2/img_2_09.png'),
             require('../../assets/images/product/details/2/img_2_10.png'),
             require('../../assets/images/product/details/2/img_2_11.png'),
+          ],
+          [
+            require("../../assets/images/product/p04.png"),
+          ],
+          [
+            require("../../assets/images/product/p05.png"),
           ]
       ]
     }

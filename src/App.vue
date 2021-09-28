@@ -2,9 +2,9 @@
   <div>
     <TopMenu/>
     <Banner :bannerPic="bannerImg"/>
-    <AlertDiv/>
+    <AlertDiv ref='alertDiv' :open="isShowAlertDiv"/>
     <router-view class="view"></router-view>
-    <Copyright/>
+    <Copyright @open="openHandler"/>
   </div>
 </template>
 
@@ -17,6 +17,7 @@ export default {
   name: 'App',
   data(){
     return {
+      isShowAlertDiv:false,
       bannerImg:require("./assets/images/banner.png"),
       topImgList:[
         'https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/b8014a90f603738d8387f7fabd1bb051f919ec1d.jpg',
@@ -34,6 +35,13 @@ export default {
     Copyright
   },
   
+  methods: {
+    openHandler(e){
+      console.log(e)
+      // this.isShowAlertDiv = true
+      this.$refs['alertDiv'].show()
+    }
+  },
 
 }
 </script>

@@ -16,7 +16,7 @@
           微信客服2
         </div>
       </div>
-      <iframe width="300" height="250" frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src="https://surl.amap.com/2OTnPXr1b6X2"></iframe>
+      <iframe width="100%" height="250" frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src="https://surl.amap.com/2OTnPXr1b6X2"></iframe>
     </div>
   </div>
 </template>

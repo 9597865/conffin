@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-78f52966"],{"1b66":function(n,t,c){"use strict";c("2f40")},"2f40":function(n,t,c){},"4f8a":function(n,t,c){"use strict";c.r(t);var e=c("7a23"),o={class:"main-box"};function a(n,t,c,a,r,u){return Object(e["openBlock"])(),Object(e["createElementBlock"])("div",o," 合作 ")}var r={name:"contact",data:function(){return{}},components:{}};c("1b66");r.render=a;t["default"]=r}}]);
-//# sourceMappingURL=chunk-78f52966.js.map
