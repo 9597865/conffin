@@ -36,6 +36,19 @@ export default {
             require('../../assets/images/product/details/1/img_1_06.png'),
             require('../../assets/images/product/details/1/img_1_07.png'),
             require('../../assets/images/product/details/1/img_1_08.png'),
+          ],
+          [
+            require('../../assets/images/product/details/2/img_2_01.png'),
+            require('../../assets/images/product/details/2/img_2_02.png'),
+            require('../../assets/images/product/details/2/img_2_03.png'),
+            require('../../assets/images/product/details/2/img_2_04.png'),
+            require('../../assets/images/product/details/2/img_2_05.png'),
+            require('../../assets/images/product/details/2/img_2_06.png'),
+            require('../../assets/images/product/details/2/img_2_07.png'),
+            require('../../assets/images/product/details/2/img_2_08.png'),
+            require('../../assets/images/product/details/2/img_2_09.png'),
+            require('../../assets/images/product/details/2/img_2_10.png'),
+            require('../../assets/images/product/details/2/img_2_11.png'),
           ]
       ]
     }
