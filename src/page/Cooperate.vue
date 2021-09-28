@@ -1,6 +1,6 @@
 <template>
   <div class="main-box">
-     合作 
+     商务合作 
   </div>
 </template>
 

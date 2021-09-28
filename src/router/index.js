@@ -1,4 +1,5 @@
-
+import Glo from '../GloData/Glo.js'
+import pathParse from 'path-parse'
 import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
 const routerHistory = createWebHistory()
 const routerHashHistory = createWebHashHistory()
@@ -41,5 +42,19 @@ const router = createRouter({
         component: Cooperate
       }
     ]
+  })
+  router.beforeEach((to, from, next) => {
+    // ...
+    const pathObj = pathParse(to.fullPath)
+    const id = pathObj.name || 0
+    console.log(id)
+    let defaultTitle = '郑氏工艺'
+    
+    if(to.fullPath.indexOf('/product/details/')!=-1){
+      let title = defaultTitle+'-'+Glo.productSlidrList[id].title
+      defaultTitle = title
+    }
+    document.title = defaultTitle
+    next()
   })
   export default router

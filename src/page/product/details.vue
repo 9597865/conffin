@@ -65,11 +65,19 @@ export default {
       this.picList = this.detailListData[id]
       this.sliderList = Glo.productSlidrList
   },
+  unmount:function() {
+		console.log('ul beforeDestroy')
+	},
   methods: {
     getUrlDetailsId(){
       const pathObj = pathParse(this.$route.fullPath)
       const id = pathObj.name || 0
       return id
+    },
+    setTitlePage(id){
+      if(Glo.productSlidrList[id]){
+        document.title = '郑氏工艺-'+Glo.productSlidrList[id].title
+      }
     },
     fetchData () {
       // replace getPost with your data fetching util / API wrapper
@@ -84,6 +92,8 @@ export default {
        */
       const id = this.getUrlDetailsId() 
       this.picList = this.detailListData[id]
+
+      
       }
    }
 

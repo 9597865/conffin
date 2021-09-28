@@ -16,18 +16,21 @@
         let leftPox = 0
         let sign = 1
         this.$nextTick(()=>{
+          let $img = this.$refs['image-box']
+          if(this.datelist.length>0){
             setTimeout(()=>{
                 const intervalId = setInterval(()=>{
                     leftPox += 2*sign
-                    this.$refs['image-box'].scrollLeft = leftPox
+                    $img.scrollLeft = leftPox
                     if(leftPox>120){
                         sign = -1
                     }
-                    if(this.$refs['image-box']==null || leftPox<=0){
+                    if($img==null || leftPox<=0){
                         clearInterval(intervalId)
                     }
                 },10)
             },2000)
+          }
         })
     },
     methods: {
