@@ -54,7 +54,7 @@ overflow-y: auto;
 .image-box{
   display: flex;
   .img-box{
-      margin-left:30px;
+      margin-left:10px;
       margin-right:30px;
       width:100px;
       height: 140px;
