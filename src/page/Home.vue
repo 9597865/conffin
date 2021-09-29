@@ -11,7 +11,6 @@
       <div v-for="(item, index) in factorylist" :key="item" class="factory-item" :style="{'width':'80%'}">
           <img :src="item" @click="clickItem(item,index)">
       </div>
-      <iframe width="90%" height="250" frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src="https://surl.amap.com/2OTnPXr1b6X2"></iframe>
     </div>
   </div>
 </template>
